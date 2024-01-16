@@ -48,5 +48,6 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
 
 1. Clone the project
 2. install FVM package --> https://fvm.app/docs/getting_started/installation
+3. Run `fvm use 3.16.3`
 2. Run `fvm flutter pub get`
 3. Run `fvm flutter run`
