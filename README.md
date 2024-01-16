@@ -42,6 +42,14 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
 - Engine • revision 54a7145303
 - Tools • Dart 3.2.3 • DevTools 2.28.4
 
+# Third party libraries
+provider: ^6.0.5
+dio: ^5.4.0
+go_router: ^13.0.0
+equatable: ^2.0.3
+sqflite: ^2.3.0
+flutter_bloc: ^7.3.3
+
 ## Run the project
 
 1. Clone the project
