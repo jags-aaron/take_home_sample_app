@@ -1,58 +1,23 @@
 {
   "status": "ok",
-  "totalResults": 4,
-  "articles": [
+  "sources": [
     {
-      "source": {
-        "id": null,
-        "name": "Yahoo Entertainment"
-      },
-      "author": "Devindra Hardawar",
-      "title": "Apple Pay, Apple Card and Wallet are facing outages",
-      "description": "Apple's financial services, including Apple Pay, Apple Cash, Apple Card and Wallet, have been experiencing service disruptions for some users since 6:15AM this morning, the company reports. As of 10:04AM Eastern, those services still have outage notices on Ap…",
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_c299994a-d047-470a-8ec4-d545bd8d5f68",
-      "urlToImage": null,
-      "publishedAt": "2023-12-20T15:11:39Z",
-      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 242 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
+      "id": "abc-news",
+      "name": "ABC News",
+      "description": "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.",
+      "url": "https://abcnews.go.com",
+      "category": "general",
+      "language": "en",
+      "country": "us"
     },
     {
-      "source": {
-        "id": null,
-        "name": "Yahoo Entertainment"
-      },
-      "author": "Pranav Dixit",
-      "title": "The Apple Watch import ban is paused – for now",
-      "description": "A federal appeals court in Washington D.C. has allowed Apple to continue importing the Apple Watch Series 9 and Apple Watch Ultra 2 models on Wednesday. The court’s decision comes a day after Apple filed an appeal\r\n against a decision by the International Tra…",
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_d2668f7a-ac9c-47b9-9b74-b3a545b2c309",
-      "urlToImage": null,
-      "publishedAt": "2023-12-27T18:33:32Z",
-      "content": "Si vous cliquez sur « Tout accepter », nos partenaires (y compris 242 qui font partie du Cadre de transparence et de consentement dIAB) et nous utiliserons également des témoins et vos données person… [+982 chars]"
-    },
-    {
-      "source": {
-        "id": "engadget",
-        "name": "Engadget"
-      },
-      "author": "Lawrence Bonk",
-      "title": "Apple appeals ban on Watch Series 9 and Ultra 2",
-      "description": "Apple has filed an appeal to the International Trade Commission (ITC) attempting to reverse a ban on US sales of the Apple Watch Series 9 and Ultra 2, according to court records.\r\n The company’s also requesting an emergency stay on the ban until a decision is…",
-      "url": "https://www.engadget.com/apple-appeals-ban-on-watch-series-9-and-ultra-2-174046101.html",
-      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/oQFsTYF6hWVogoCoK_B_ig--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03OTg-/https://s.yimg.com/os/creatr-uploaded-images/2023-12/9db494b0-a415-11ee-bfba-7079485ad539",
-      "publishedAt": "2023-12-26T17:40:46Z",
-      "content": "Apple has filed an appeal to the International Trade Commission (ITC) attempting to reverse a ban on US sales of the Apple Watch Series 9 and Ultra 2, according to court records.\r\n The companys also … [+2105 chars]"
-    },
-    {
-      "source": {
-        "id": "engadget",
-        "name": "Engadget"
-      },
-      "author": "Lawrence Bonk",
-      "title": "Apple is selling its contested Watch models again after import ban pause",
-      "description": "The Apple Watch Series 9 and Ultra 2 wearables are back on sale via the manufacturer.\r\n We knew this was coming yesterday, after a federal appeals court in Washington D.C. granted a temporary pause\r\n on an import and sales ban. The ban could be reinstated on …",
-      "url": "https://www.engadget.com/apple-is-selling-its-contested-watch-models-again-after-import-ban-pause-193824245.html",
-      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/zP_qSS5hecMkc6Q24VmxmQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-09/ca741b60-5749-11ee-bfff-96fc8a455d70",
-      "publishedAt": "2023-12-28T19:38:24Z",
-      "content": "The Apple Watch Series 9 and Ultra 2 wearables are back on sale via the manufacturer.\r\n We knew this was coming yesterday, after a federal appeals court in Washington D.C. granted a temporary pause\r\n… [+1766 chars]"
+      "id": "abc-news-2",
+      "name": "ABC News 2",
+      "description": "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.",
+      "url": "https://abcnews.go.com",
+      "category": "general",
+      "language": "en",
+      "country": "us"
     }
   ]
 }

@@ -1,27 +1,33 @@
 import 'package:equatable/equatable.dart';
+import 'package:take_home_sample_app/domain/entity/article_entity.dart';
 
-class LoginScreenModel extends Equatable {
-  const LoginScreenModel._({
+class HomeScreenModel extends Equatable {
+  const HomeScreenModel._({
     required this.title,
-    required this.onSuccess,
+    required this.articles,
+    required this.articlesPressed,
   });
 
-  factory LoginScreenModel.build({
+  factory HomeScreenModel.build({
     required String title,
-    bool? onSuccess,
+    required List<TopHeadlineSourceEntity> articles,
+    required Function(TopHeadlineSourceEntity) articlePressed,
   }) {
-    return LoginScreenModel._(
+    return HomeScreenModel._(
       title: title,
-      onSuccess: onSuccess ?? false,
+      articles: articles,
+      articlesPressed: articlePressed,
     );
   }
 
   final String title;
-  final bool onSuccess;
+  final List<TopHeadlineSourceEntity> articles;
+  final Function(TopHeadlineSourceEntity) articlesPressed;
 
   @override
   List<Object?> get props => [
         title,
-        onSuccess,
+        articles,
+        articlesPressed,
       ];
 }

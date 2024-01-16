@@ -1,52 +1,60 @@
 import 'package:equatable/equatable.dart';
 
-class ArticleEntity extends Equatable {
-  const ArticleEntity({
-    required this.uid,
-    required this.content,
-    required this.publishedAt,
-    required this.image,
-    required this.link,
+class TopHeadlineSourceEntity extends Equatable {
+  const TopHeadlineSourceEntity({
+    required this.id,
+    required this.name,
     required this.description,
-    required this.title,
-    required this.author,
-    required this.source,
+    required this.link,
+    required this.category,
+    required this.language,
+    required this.country,
   });
 
-  final String? uid;
-  final String? content;
-  final String? publishedAt;
-  final String? image;
-  final String? link;
-  final String? description;
-  final String? title;
-  final String? author;
-  final String? source;
+  final String id;
+  final String name;
+  final String description;
+  final String link;
+  final String category;
+  final String language;
+  final String country;
 
-  factory ArticleEntity.fromJson(Map<String, dynamic> json) {
-    return ArticleEntity(
-      uid: json['uid'],
-      content: json['content'],
-      publishedAt: json['publishedAt'],
-      image: json['urlToImage'],
-      link: json['url'],
-      description: json['description'],
-      title: json['title'],
-      author: json['author'],
-      source: json['source']['name'],
-    );
+  factory TopHeadlineSourceEntity.fromJson(Map<String, dynamic> json) {
+    return TopHeadlineSourceEntity(
+        id: json['id'],
+        name: json['name'],
+        description: json['description'],
+        link: json['url'],
+        category: json['category'],
+        language: json['language'],
+        country: json['country']);
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'description': description,
+      'link': link,
+      'category': category,
+      'language': language,
+      'country': country,
+    };
+  }
+
+  @override
+  String toString() {
+    return 'Article{id: $id, name: $name, description: $description, link: $link, category: $category, language: $language, country: $country}';
   }
 
   @override
   List<Object?> get props => [
-        uid,
-        content,
-        publishedAt,
-        image,
-        link,
+        id,
+        name,
         description,
-        title,
-        author,
-        source,
+        link,
+        category,
+        language,
+        country,
       ];
 }

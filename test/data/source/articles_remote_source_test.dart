@@ -5,7 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:take_home_sample_app/common_platform/dio/exceptions.dart';
 import 'package:take_home_sample_app/common_platform/i_platform_client.dart';
-import 'package:take_home_sample_app/data/source/articles_remote_source.dart';
+import 'package:take_home_sample_app/data/model/top_headlines_response_model.dart';
+import 'package:take_home_sample_app/data/source/top_headlines_remote_source.dart';
 
 import '../fixtures/fixture_reader.dart';
 
@@ -17,7 +18,7 @@ class DioMock extends Mock implements Dio {}
 
 void main() {
   late IPlatformClient platformClient;
-  late ArticlesRemoteSource remoteSource;
+  late TopHeadlineRemoteSource remoteSource;
 
   final dioMock = DioMock();
 
@@ -29,12 +30,12 @@ void main() {
     platformClient = PlatformClientMock();
     when(() => platformClient.dioClient).thenAnswer((_) => dioMock);
 
-    remoteSource = ArticlesRemoteSourceImp(
+    remoteSource = TopHeadlinesRemoteSourceImp(
       platformClient: platformClient,
     );
   });
 
-  group('getArticlesStatus - HTTP status codes', () {
+  group('getAllTopHeadlinesSourcesStatus - HTTP status codes', () {
     test(
       '200',
       () async {
@@ -48,11 +49,9 @@ void main() {
           ),
         );
 
-        final response = await remoteSource.getArticles('foo');
+        final response = await remoteSource.getAllTopHeadlinesSources();
 
-        expect(response.length, 4);
-        expect(response.last.title,
-            "Apple is selling its contested Watch models again after import ban pause");
+        expect(response, TopHeadlinesResponseModel.fromJson(jsonDecode(mockResponse)).articles);
       },
     );
 
@@ -67,9 +66,9 @@ void main() {
           ),
         );
 
-        final call = remoteSource.getArticles;
+        final call = remoteSource.getAllTopHeadlinesSources;
 
-        expect(() => call('foo'),
+        expect(() => call(),
             throwsA(const TypeMatcher<BadRequestException>()));
       },
     );
@@ -85,9 +84,9 @@ void main() {
           ),
         );
 
-        final call = remoteSource.getArticles;
+        final call = remoteSource.getAllTopHeadlinesSources;
 
-        expect(() => call('foo'),
+        expect(() => call(),
             throwsA(const TypeMatcher<UnauthorizedException>()));
       },
     );
@@ -103,9 +102,9 @@ void main() {
           ),
         );
 
-        final call = remoteSource.getArticles;
+        final call = remoteSource.getAllTopHeadlinesSources;
 
-        expect(() => call('foo'),
+        expect(() => call(),
             throwsA(const TypeMatcher<TooManyRequestException>()));
       },
     );
@@ -121,10 +120,10 @@ void main() {
           ),
         );
 
-        final call = remoteSource.getArticles;
+        final call = remoteSource.getAllTopHeadlinesSources;
 
         expect(
-            () => call('foo'), throwsA(const TypeMatcher<ServerException>()));
+            () => call(), throwsA(const TypeMatcher<ServerException>()));
       },
     );
   });

@@ -4,16 +4,35 @@ import 'package:http/http.dart' as http;
 
 import 'dio/app_interceptors.dart';
 import 'i_platform_client.dart';
+import 'dart:async';
+
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 const baseUrlApp = 'https://newsapi.org/v2/';
+const databaseRules = 'CREATE TABLE news(id TEXT PRIMARY KEY, name TEXT, description TEXT, link TEXT, category TEXT, language TEXT, country TEXT)';
 
 class MobilePlatformClient extends IPlatformClient {
-
   @override
   http.Client get httpClient => http.Client();
 
   @override
   Dio get dioClient => _createDioClient();
+
+  @override
+  Future<Database> get dbSQL async => _database();
+
+  Future<Database> _database() async {
+    return openDatabase(
+      join(await getDatabasesPath(), 'news_database.db'),
+      onCreate: (db, version) {
+        return db.execute(
+          databaseRules,
+        );
+      },
+      version: 1,
+    );
+  }
 
   Duration timeout() => const Duration(milliseconds: 5000);
 
