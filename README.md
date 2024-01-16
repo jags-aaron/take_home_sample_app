@@ -59,7 +59,7 @@ flutter_bloc: ^7.3.3
 3. Run `fvm flutter run`
 
 ## TODO task
-1. background process to get new date (considering using [WorkManager](https://pub.dev/packages/workmanager)
+1. background process to get new information (I considered =[WorkManager](https://pub.dev/packages/workmanager)
 2. UI and bloc tests
 3. remove Hardcoded and boilerplate code for favorites and detail
 
