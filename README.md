@@ -58,10 +58,11 @@ flutter_bloc: ^7.3.3
 2. Run `fvm flutter pub get`
 3. Run `fvm flutter run`
 
-## TODO task
+## Pending task (WIP)
 1. background process to get new information (I considered =[WorkManager](https://pub.dev/packages/workmanager)
 2. UI and bloc tests
-3. remove Hardcoded and boilerplate code for favorites and detail
+3. remove boilerplate code for favorites and detail
+4. Remove hardcoded copies, styles and values
 
 ## Demo
 https://github.com/jags-aaron/take_home_sample_app/assets/4992208/d6aac09b-e515-49fc-95ce-6bd74f506a61
