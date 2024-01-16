@@ -51,3 +51,8 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
 3. Run `fvm use 3.16.3`
 2. Run `fvm flutter pub get`
 3. Run `fvm flutter run`
+
+
+
+https://github.com/jags-aaron/take_home_sample_app/assets/4992208/d6aac09b-e515-49fc-95ce-6bd74f506a61
+
