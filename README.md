@@ -39,10 +39,10 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
 
 ## Running and tested on
 
-Flutter 3.16.3 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision b0366e0a3f (6 weeks ago) • 2023-12-05 19:46:39 -0800
-Engine • revision 54a7145303
-Tools • Dart 3.2.3 • DevTools 2.28.4
+- Flutter 3.16.3 • channel stable • https://github.com/flutter/flutter.git
+- Framework • revision b0366e0a3f (6 weeks ago) • 2023-12-05 19:46:39 -0800
+- Engine • revision 54a7145303
+- Tools • Dart 3.2.3 • DevTools 2.28.4
 
 ## Run the project
 
