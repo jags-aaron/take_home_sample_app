@@ -11,9 +11,7 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
     └── 📁common_platform
         └── 📁dio
         └── 📁extensions
-        └── i_platform_client.dart
         └── 📁l10n
-        └── mobile_platform_client.dart
         └── 📁theme
     └── 📁data
         └── 📁model
@@ -37,7 +35,7 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
     └── main.dart
 ```
 
-## Running and tested on
+## Environment
 
 - Flutter 3.16.3 • channel stable • https://github.com/flutter/flutter.git
 - Framework • revision b0366e0a3f (6 weeks ago) • 2023-12-05 19:46:39 -0800
@@ -52,7 +50,11 @@ Build a simple, user friendly news app that consumes the API from newsapi.org
 2. Run `fvm flutter pub get`
 3. Run `fvm flutter run`
 
+## TODO task
+1. background process to get new date (considering using [WorkManager](https://pub.dev/packages/workmanager)
+2. UI and bloc tests
+3. remove Hardcoded and boilerplate code for favorites and detail
 
-
+## Demo
 https://github.com/jags-aaron/take_home_sample_app/assets/4992208/d6aac09b-e515-49fc-95ce-6bd74f506a61
 
